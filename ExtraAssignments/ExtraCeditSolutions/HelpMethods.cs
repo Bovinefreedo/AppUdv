@@ -101,6 +101,32 @@ namespace ExtraAssignments.solutions
 
         }
 
+        public int[] fillArray(int numbers)
+        {
+            int size = 10;
+            int nextCell = 0;
+            Random random = new Random();
+            int[] array = new int[10];
+            for (int i = 0; i < numbers; i++)
+            {
+                array[nextCell] = random.Next(50);
+                nextCell++;
+                if (size == nextCell)
+                {
+                    size = size *2;
+                    int[] array2 = new int[size];
+                    for (int j = 0; j < array.Length; j++)
+                    {
+                        array2[j] = array2[j];
+                    }
+
+                    array2 = array;
+                }
+            }
+            return array;
+        }
+
+
         // 0: Normal Dice
         // 1: Weighted Die
         // 2: All or Nothing

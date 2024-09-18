@@ -36,7 +36,7 @@ namespace ExtraAssignments.modul4
             int total = 0;
             foreach (IDice dice in myDice)
             {
-                total += dice.getSides();
+                total += dice.rollDice();
             }
             return total;
         }

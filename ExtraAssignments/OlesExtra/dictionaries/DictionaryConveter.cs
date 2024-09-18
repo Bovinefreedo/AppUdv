@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace ExtraAssignments.OlesExtra.dictionaries
 {
-    public class DictionaryConveter
+    public class DictionaryConverter
     {
-        public DictionaryConveter(){}
+        public DictionaryConverter(){}
 
         public void convertDictionary(string pathOriginal, string pathCopy) { 
             List<string> words = new List<string>();
@@ -18,8 +18,9 @@ namespace ExtraAssignments.OlesExtra.dictionaries
             foreach (string word in words)
             {
                 Console.WriteLine(word);
+                Console.WriteLine(word);
             }
-
+            Console.WriteLine(words);
             File.WriteAllLines(pathCopy, words);
         }
 

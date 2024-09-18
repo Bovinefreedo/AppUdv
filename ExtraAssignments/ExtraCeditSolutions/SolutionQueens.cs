@@ -60,6 +60,7 @@ namespace ExtraAssignments.solutions
                 for (int j = 0; j < n; j++) { board[i][j] = ""; }
             }
             getNextSquareInRow(board, 0);
+            Console.WriteLine($"There are {numberOfSolutions} solutions");
             return numberOfSolutions;
         }
 

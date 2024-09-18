@@ -42,7 +42,7 @@ namespace ExtraAssignments.OlesExtra
                 _numberOfGuesses++;
                 if (_numberOfGuesses >= 10) {
                     finished = true;
-                    Console.WriteLine($"You are out of guesses, the word was {_word.printGuessedWord()}");
+                    Console.WriteLine($"You are out of guesses and have lost you big big snail, the word was {_word.printGuessedWord()}");
                 }
             }
         

@@ -32,5 +32,30 @@ namespace ExtraAssignments.ExtraCredit
             getNextSquareInRow(board, 0);
             return numberOfSolutions;
         }
+
+        public void printBoard(string[][] board)
+        {
+            for (int k = 0; k < board.Length; k++)
+            {
+                Console.Write("----");
+            }
+            Console.WriteLine();
+            for (int i = 0; i < board.Length; i++)
+            {
+                for (int j = 0; j < board[i].Length; j++)
+                {
+                    if (board[j][i].Equals("Q"))
+                        Console.Write("| Q ");
+                    else
+                        Console.Write("|   ");
+                }
+                Console.WriteLine("|");
+                for (int k = 0; k < board.Length; k++)
+                {
+                    Console.Write("----");
+                }
+                Console.WriteLine();
+            }
+        }
     }
 }
