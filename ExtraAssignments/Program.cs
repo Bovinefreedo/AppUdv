@@ -3,6 +3,7 @@ using ExtraAssignments.modul1;
 using ExtraAssignments.modul2;
 using ExtraAssignments.modul3;
 using ExtraAssignments.modul4;
+using ExtraAssignments.modul4.rollStrategies;
 using ExtraAssignments.OlesExtra;
 using ExtraAssignments.OlesExtra.dictionaries;
 using ExtraAssignments.solutions;
@@ -24,9 +25,15 @@ SolutionQueens nQueens = new SolutionQueens();
 //HiddenWord word = new HiddenWord("badeand");
 //Hangman game = new Hangman(word);
 
-DictionaryConverter converter = new DictionaryConverter();
+//TestDice t = new TestDice();
+//List<IDice> list = new List<IDice>();
+//for (int i = 0; i < 5; i++) {
+//
+//}
+//AdaptableDie normal = new AdaptableDie(new NormalRollStrategy());
+//
+//t.testADie(normal, 100000);
 
-string path = @"C:\Users\hotso\source\repos\ExtraAssignments\ExtraAssignments\OlesExtra\dictionaries\da_DK.dic";
-string destination = @"C:\Users\hotso\source\repos\ExtraAssignments\ExtraAssignments\OlesExtra\dictionaries\da_DK.txt";
+Yatzy y = new Yatzy();
 
-converter.convertDictionary(path, destination);
+y.playRound();
