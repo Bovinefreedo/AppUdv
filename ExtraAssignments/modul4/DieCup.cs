@@ -49,14 +49,18 @@ namespace ExtraAssignments.modul4
             }
             return total;
         }
-        public int rollDice(bool[] diceToBeRolled) { 
+        public int rollDice(bool[] notRolled) { 
             int total = 0;
-            for (int i = 0; i<diceToBeRolled.Length && i<myDice.Count ; i++){
-                if (diceToBeRolled[i]) {
+            for (int i = 0; i<notRolled.Length && i<myDice.Count ; i++){
+                if (!notRolled[i]) {
                     total += myDice[i].rollDice();
                 }
             }
             return total;
+        }
+
+        public int[] getIndividualSides(int d1, int d2, int d3, int d4, int d5) { 
+            return new int[] { d1, d2, d3, d4, d5 };
         }
     }
 }
