@@ -446,7 +446,7 @@ namespace ExtraAssignments.OlesExtra
             for (int i = 0; i < _activePlayers; i++)
             {
                 if (sum[i] < 10) Console.Write($" {sum[i]}  |");
-                else { Console.WriteLine($" {sum[i]} |"); }
+                else { Console.Write($" {sum[i]} |"); }
             }
             Console.WriteLine("");
             Console.Write($"| Bonus            |");
@@ -560,7 +560,26 @@ namespace ExtraAssignments.OlesExtra
         }
         public void displayRules()
         {
-            Console.WriteLine("please implement me");
+            Console.WriteLine("The rules of YATZY (as Frank remembers them from his youth):");
+            Console.WriteLine("Each player takes turns, rolling the dice up to three times, on the first throw all dice");
+            Console.WriteLine("but on the following throw you can lock any number of specific dice to preserve their value.");
+            Console.WriteLine("You choose the field you want to score and add the eyes of dice within the category, and write it in the field.");
+            Console.WriteLine("If you choose a field that will not yield a score, it will receive an X and cannot be scored again.");
+            drawStraightLine();
+            Console.WriteLine("Field 1-6, here the scoring is based on how many of the given type you have, 1 aces will only score rolls with 1");
+            Console.WriteLine("Field 7 Pair scores the biggest pair you got, even if that is in a triple or more it only scores two dice");
+            Console.WriteLine("Field 8 two pair can be 4 of a kind or two different pairs");
+            Console.WriteLine("Field 9-10 are three and four of a kind, it cannot score more dice");
+            Console.WriteLine("Field 11 Full house is a pair and triple");
+            Console.WriteLine("Field 12-13 are the straights, the small straight is 1-2-3-4-5 and the big straight is 2-3-4-5-6");
+            Console.WriteLine("Field 14 is YATZY. You need 5 of a kind, but it always scores 50 points");
+            Console.WriteLine("Field 15 will look at the eyes of your dice and award you points equivalent to the number of eyes");
+            Console.WriteLine("The bonus is awarded if the combined score of fields 1-6 is 63. The sum is how much you have gotten this far");
+            drawStraightLine();
+            Console.WriteLine("Each player will score one field every turn, meaning that after 15 rounds all fields should be filled");
+            Console.WriteLine("The objective is to have as many points and as much fun as possible, gl hf");
+            drawStraightLine();
+            Console.WriteLine("for options enter the command o");
         }
 
         public void displayOptions()
