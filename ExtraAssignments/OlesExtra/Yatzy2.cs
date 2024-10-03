@@ -114,6 +114,7 @@ namespace ExtraAssignments.OlesExtra
         {
             foreach (string i in input)
             {
+                if (i.Length<1) continue;
                 string command = i.Substring(0, 1);
                 int num = -1;
                 bool hasNum = int.TryParse(i.Remove(0, 1), out num);
@@ -328,8 +329,10 @@ namespace ExtraAssignments.OlesExtra
             {
                 case 1: //1'ere
                     return scoreNumbers(1);
+
                 case 2: //2'ere
                     return scoreNumbers(2);
+
                 case 3: //3'ere
                     return scoreNumbers(3);
 
@@ -353,14 +356,19 @@ namespace ExtraAssignments.OlesExtra
 
                 case 10: //fire ens
                     return scoreMultiple(4);
+
                 case 11: //fuldt hus 
                     return scoreMultiplePairs(3, 2);
+
                 case 12: //lav straight
                     return scoreStraight(1);
+
                 case 13: //høj straight
                     return scoreStraight(2);
+
                 case 14: //Yatzy
                     return scoreYatzy();
+
                 case 15: //chance
                     return _diceCup.getEyes();
                 default:
@@ -452,7 +460,7 @@ namespace ExtraAssignments.OlesExtra
             Console.Write($"| Bonus            |");
             for (int i = 0; i < _activePlayers; i++)
             {
-                if (sum[i] > 63) Console.Write($" 50 |");
+                if (sum[i] >= 63) Console.Write($" 50 |");
                 else Console.Write($" 0  |");
             }
             Console.WriteLine("");
@@ -618,7 +626,6 @@ namespace ExtraAssignments.OlesExtra
             Console.WriteLine(@"  |    /_____\   |     /       |");
             Console.WriteLine(@"  |   /       \  |    /        |");
             Console.WriteLine(@"  |  /         \ |   ZZZZZ     |");
-
         }
 
     }
