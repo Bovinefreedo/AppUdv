@@ -32,7 +32,7 @@ namespace ExtraAssignments.OlesExtra.Arv
             foreach (Project p in projects) {
                 if (now > p._start && now < p._end) {
                     int duration = ((p._end.Year - p._start.Year) * 12) + p._end.Month - p._start.Month;
-                    salary += p._payment/duration;
+                    salary += p._payment/(duration+1);
                 }
             }
             return salary;

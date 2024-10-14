@@ -4,7 +4,9 @@ using ExtraAssignments.modul4.rollStrategies;
 using ExtraAssignments.OlesExtra;
 using ExtraAssignments.modul3;
 using ExtraAssignments.OlesExtra.Arv;
+using ExtraAssignments.modul8;
+using ExtraAssignments.OlesExtra.Yatzy;
 
 
-PrintSalaries p = new PrintSalaries();
-p.print();
+Yatzy2 y = new Yatzy2();
+y.playGame();
